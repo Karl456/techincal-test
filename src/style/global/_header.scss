@@ -1,10 +1,16 @@
 header#site-header {
-    margin-bottom: 30px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1000;
     padding-top: 15px;
+    padding-bottom: 15px;
 
     a#logo {
         display: block;
-
+        padding-top: 15px;
+        padding-top: 15px;
+        padding-left: 40px;
         img {
             display: block;
         }
@@ -14,28 +20,46 @@ header#site-header {
         ul#nav-main {
             list-style: none;
             margin: 0;
-            padding: 0;
-            text-align: right;
-
+            padding: 27px 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
             li {
                 display: inline-block;
-                margin-right: 10px;
+                margin-right: 35px;
                 padding: 0;
 
                 a {
-                    color: #000;
+                    color: $white;
                     display: block;
-                    line-height: 50px;
-
+                    padding: 10px 0;
+                    border-bottom: 2px solid transparent;
+                    transition: border-color 0.5s, color 0.5s;
+                    font-family: 'Nunito';
+                    font-size: 19px;
                     &:hover {
-                        color: $brand-primary;
+                        color: $white;
+                        border-color: $light-purple;
                     }
                 }
 
                 &.current,
                 &.parent-current {
                     a {
-                        color: $brand-primary;
+                        color: $white;
+                        border-color: $light-purple;
+                    }
+                }
+
+                &:last-of-type {
+                    a {
+                        border: 1px solid $white;
+                        border-radius: 24px;
+                        padding: 6px 37px;
+                        &:hover {
+                            color: $light-purple;
+                            border-color: $light-purple;
+                        }
                     }
                 }
             }

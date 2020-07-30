@@ -12,7 +12,7 @@ mix.setPublicPath('./web')
         jquery: ['$', 'window.jQuery', "jQuery", "window.$", "jquery", "window.jquery"]
     })
     .browserSync({
-        proxy: 'sandbox.test',
+        proxy: 'techincal-test.local.com',
         files: [
            './templates/**/*.twig',
            './web/dist/*'

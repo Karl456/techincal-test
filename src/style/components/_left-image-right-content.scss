@@ -1,0 +1,38 @@
+.left-image-right-content-container {
+    background-color: #F0F0F0;
+    .row {
+        align-items: center;
+        .image-container {
+            text-align: center;
+            img {
+                display: inline-block;
+                max-width: 100%;
+            }
+        }
+        .content-container {
+            padding: 50px 20px;
+            text-align: center;
+        }
+    }
+}
+
+@media (min-width: $screen-md-min) {
+    .left-image-right-content-container {
+        .row {
+            .content-container {
+                text-align: center;
+                padding: 140px 125px;
+            }
+        }
+    }
+}
+
+@media (min-width: $screen-lg-min) {
+    .left-image-right-content-container {
+        .row {
+            .content-container {
+                text-align: left;
+            }
+        }
+    }
+}

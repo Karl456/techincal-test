@@ -1,0 +1,17 @@
+<section class="testimonials-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-10 col-centered">
+                <div class="quotes-container"><span>“</span><span>”</span></div>
+                <div class="testimonials-slider">
+                    {% for testimonial in block.testimonials %}
+                        <div class="testimonial">
+                            <p>{{ testimonial.testimonialContent }}</p>
+                            <p><b>{{ testimonial.testimonialPerson }}</b></p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -46,9 +46,10 @@ $(window).on('scroll', function () {
     let st = $(this).scrollTop();
 
     if (st < 50) {
-        $overlayBar.removeClass('offscreen');
+        $overlayBar.removeClass('offscreen scrolled');
     } else if (st > lastScrollTop) {
         $overlayBar.addClass('offscreen');
+        $overlayBar.addClass('scrolled');
     } else {
         $overlayBar.removeClass('offscreen');
     }

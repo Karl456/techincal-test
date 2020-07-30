@@ -1,16 +1,16 @@
 div#overlay-bar {
-    background: rgba(0, 0, 0, .5);
     display: none;
     left: 0;
-    padding: 10px 15px;
+    padding: 14px 15px 15px;
     position: fixed;
     right: 0;
     top: 0;
     transition: top .2s ease-in-out;
     z-index: 9999;
 
-    &.offscreen {
-        top: -56px;
+    &.scrolled {
+        transition: background-color 0.5s;
+        background-color: #1F1F1F;
     }
 
     @media (max-width: $screen-sm-max) {
@@ -19,8 +19,7 @@ div#overlay-bar {
 
     a#overlay-bar-open-menu {
         color: #fff;
-        float: left;
-        font-size: 2.1rem;
+        font-size: 30px;
     }
 
     a#overlay-bar-logo {
@@ -35,6 +34,9 @@ div#overlay-bar {
             width: auto;
         }
     }
+    > .row {
+        align-items: center;
+    }
 }
 
 // Overlay nav
@@ -44,14 +46,14 @@ body.overlay-open {
 }
 
 div#overlay-menu {
-    background: rgba(0, 0, 0, .9);
+    background: #1F1F1F;
     bottom: 0;
     color: #fff;
     display: none;
     left: 0;
     overflow: scroll;
-    padding: 55px 0;
-    position: absolute;
+    padding: 15px 0;
+    position: fixed;
     right: 0;
     top: 0;
     z-index: 10000;
@@ -83,7 +85,7 @@ div#overlay-menu {
     }
 
     a:hover {
-        color: darken($brand-primary, 10%);
+        color: $white;
     }
 
     form#overlay-menu-search {
@@ -96,6 +98,7 @@ div#overlay-menu {
     }
 
     nav {
+        margin-top: 35px;
         margin-bottom: 30px;
 
         > ul {
@@ -103,10 +106,20 @@ div#overlay-menu {
             margin: 0;
             padding: 0;
 
+            > li {
+                &:last-of-type {
+                    margin-top: 35px;
+                    a {
+                        border-radius: 50px;
+                        text-align: center;
+                        border: 1px solid $white;
+                    }
+                }
+            }
+
             > li > a {
-                border-bottom: 1px solid rgba(255, 255, 255, .3);
                 color: #fff;
-                font-size: 2rem;
+                font-size: 24px;
                 padding: 10px;
 
                 span {
@@ -121,8 +134,9 @@ div#overlay-menu {
                 padding: 10px 0 0 20px;
 
                 > li > a {
-                    color: #fff;
-                    padding: 5px 0;
+                    color: #CBCBCB;
+                    font-size: 18px;
+                    padding: 10px 0;
 
                     span {
                         display: none;

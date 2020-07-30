@@ -1,6 +1,12 @@
 <div id="overlay-bar">
-    <a href="#" id="overlay-bar-open-menu" class="open-overlay"><i class="fal fa-fw fa-bars"></i></a>
-    <a href="/" id="overlay-bar-logo">
-        <img src="/skin/overlay-logo.png" alt=""/>
-    </a>
+    <div class="row">
+        <div class="col-xs-6">
+            <a id="logo" href="{{ siteUrl }}">
+                <img src="/skin/logo.svg" alt="{{ siteName }} Logo" width="119" height="49" class="img-responsive"/>
+            </a>
+        </div>
+        <div class="col-xs-6 text-right">
+            <a href="#" id="overlay-bar-open-menu" class="open-overlay"><i class="fas fa-bars"></i></a>
+        </div>
+    </div>
 </div>

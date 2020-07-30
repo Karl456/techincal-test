@@ -1,5 +1,5 @@
 // Colours
-$brand-primary: #009ddc;
+$brand-primary: #1F1F1F;
 $brand-secondary: #969696;
 $brand-danger: #b33;
 $contrast-panel-bg: #e0e0e0;
@@ -14,8 +14,12 @@ $yellow: #fff10f;
 $link-hover-color: if(lightness($brand-primary) > 35, darken($brand-primary, 50%), lighten($brand-primary, 50%));
 $border-grey: #f2f5f7;
 
+$white: #fff;
+$light-purple: #E13BFF;
+$purple: #8A0BDB;
+
 // Typography
-$font-family-sans-serif: 'Roboto', sans-serif;
+$font-family-sans-serif: 'Open Sans', sans-serif;
 $line-height-base: 1.75;
 $font-size-base: 16px;
 $font-size-large: 18px;
@@ -31,3 +35,6 @@ $blockquote-font-size: $font-size-base;
 $border-radius-base: 0;
 $border-radius-small: 0;
 $border-radius-large: 0;
+
+$body-font-family: 'Open Sans', sans-serif;
+$header-font-family: 'Nunito', sans-serif;

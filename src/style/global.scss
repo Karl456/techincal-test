@@ -1,2 +1,33 @@
 @import 'global/header';
 @import 'global/footer';
+
+.col-centered {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.row {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.container {
+    position: relative;
+}
+
+img {
+    max-width: 100%;
+}

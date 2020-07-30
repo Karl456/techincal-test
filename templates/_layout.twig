@@ -32,33 +32,24 @@
 <body class="{{ currentUser and currentUser.can('accessCp') ? 'admin' }} {{ craft.app.request.segments|join(' ') }} {% block bodyClass %}{% endblock %}">
 {% include '_partials/ienotice' %}
 
-{% include '_partials/accesibility_panel' %}
-
 <div id="wrapper">
     <a class="sr-only" href="#content">Skip to main content</a>
 
     {% include '_partials/alert' %}
 
     <header id="site-header" class="visible-md visible-lg">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <a id="logo" href="{{ siteUrl }}" title="Home" onClick="recordEvent('Header', 'Click', 'Logo');">
-                        <img src="/skin/logo.png" alt="{{ siteName }} Logo" class="img-responsive"/>
-                    </a>
-                </div>
-
-                <div class="col-md-8">
-                    <nav id="full">
-                        {% include '_partials/nav' %}
-                    </nav>
-                </div>
-                <div class="col-md-1 text-center">
-                    <a href="#" id="nav-overlay-button" class="open-overlay"><i class="fas fa-bars"></i></a>
-                </div>
+        <div class="row no-gutters">
+            <div class="col-md-3">
+                <a id="logo" href="{{ siteUrl }}" title="Home" onClick="recordEvent('Header', 'Click', 'Logo');">
+                    <img src="/skin/logo.svg" alt="{{ siteName }} Logo" width="165" height="68" class="img-responsive"/>
+                </a>
+            </div>
+            <div class="col-md-9">
+                <nav id="full">
+                    {% include '_partials/nav' %}
+                </nav>
             </div>
         </div>
-
     </header>
 
     <main id="content">
@@ -68,41 +59,31 @@
     <footer id="site-footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-7">
+                <div class="col-xs-12 col-md-6">
                     <div id="contact-details">
-                        <p>&copy; {{ siteName }} / Phone: {{ seomatic.site.creator.genericTelephone }} /
-                            Email: {{ ('<a href="mailto:' ~ seomatic.site.creator.genericEmail ~ '">' ~ seomatic.site.creator.genericEmail ~ '</a>')|encode }}</p>
-
-                        <ul id="social">
-                            <li>
-                                <a href="{{ seomatic.site.sameAsLinks['facebook']['url'] }}" onClick="recordEvent('Footer Facebook', 'Click', 'Facebook');">
-											<span class="fa-stack fa-lg">
-												<i class="fas fa-circle fa-stack-2x"></i>
-												<i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-											</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{ seomatic.site.sameAsLinks['twitter']['url'] }}" onClick="recordEvent('Footer Twitter', 'Click', 'Twitter');">
-										  	<span class="fa-stack fa-lg">
-												<i class="fas fa-circle fa-stack-2x"></i>
-												<i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-											</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{ seomatic.site.sameAsLinks['instagram']['url'] }}" onClick="recordEvent('Footer Instagram', 'Click', 'Instagram');">
-										    <span class="fa-stack fa-lg">
-												<i class="fas fa-circle fa-stack-2x"></i>
-												<i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
-											</span>
-                                </a>
-                            </li>
-                        </ul>
+                        <p><img src="/skin/logo.svg" height="55" width="135" alt=""></p>
+                        <p><a href="">{{ ('<a href="tel:' ~ seomatic.site.creator.genericTelephone ~ '"><i class="fas fa-phone"></i>' ~ seomatic.site.creator.genericTelephone ~ '</a>')|encode }}</a></p>
+                        <p><a href="">{{ ('<a href="mailto:' ~ seomatic.site.creator.genericEmail ~ '"><i class="fas fa-envelope"></i>' ~ seomatic.site.creator.genericEmail ~ '</a>')|encode }}</a></p>
                     </div>
                 </div>
-
-                <div class="col-md-5 text-right">
+                <div class="col-xs-12 col-md-6 text-right">
+                    <ul id="social">
+                        <li>
+                            <a href="{{ seomatic.site.sameAsLinks['facebook']['url'] }}" onClick="recordEvent('Footer Facebook', 'Click', 'Facebook');">
+                                <i class="fab fa-facebook-f fa-inverse"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ seomatic.site.sameAsLinks['twitter']['url'] }}" onClick="recordEvent('Footer Twitter', 'Click', 'Twitter');">
+                                <i class="fab fa-twitter fa-inverse"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ seomatic.site.sameAsLinks['instagram']['url'] }}" onClick="recordEvent('Footer Instagram', 'Click', 'Instagram');">
+                                <i class="fab fa-instagram fa-inverse"></i>
+                            </a>
+                        </li>
+                    </ul>
                     <nav id="info">
                         <ul>
                             {% cache globally %}

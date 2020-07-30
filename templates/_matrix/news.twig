@@ -1,0 +1,25 @@
+{% set articles = craft.entries().section('news').orderBy('postDate desc').limit(block.limit).all() %}
+<div class="latest-news-container">
+    <h2 class="text-center">Latest News</h2>
+    <div class="container">
+        <div class="row">
+            {% for article in articles %}
+                <div class="col-md-4">
+                    <a href="{{ article.url }}">
+                        <div class="row">
+                            <div class="col-xs-4 col-md-12">
+                                <p><img src="{{ article.thumbImage.first().url }}" alt=""></p>
+                            </div>
+                            <div class="col-xs-8 col-md-12">
+                                <div class="article-content">
+                                    <p>{{ article.title }}</p>
+                                    <time><i class="far fa-clock"></i>{{ article.postDate | date('d F Y') }}</time>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<section class="hero-banner" style="background-image: url({{  block.heroBanner.first().url }});">
+    <div class="hero-banner-container container">
+        <div class="row no-gutters">
+            <div class="col-md-10 col-centered">
+                <h1>{{ block.heroTitle }}</h1>
+            </div>
+        </div>
+        <div class="row no-gutters">
+            <div class="col-xs-11 col-centered">
+                <p>{{ block.heroSubtitle }}</p>
+                {{ block.heroLink.link({ 'class': 'light-purple-button' }) }}
+            </div>
+        </div>
+    </div>
+    <a href="#after-hero" class="hero-scroll"><img src="/skin/scroll.png" alt=""></a>
+</section>
+<div id="after-hero"></div>

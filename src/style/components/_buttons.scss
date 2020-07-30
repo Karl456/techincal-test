@@ -1,0 +1,23 @@
+@mixin button($background-color) {
+    display: inline-block;
+    padding: 20px 100px;
+    border-radius: 43px;
+    color: $white;
+    background-color: $background-color;
+    transition: background-color 0.5s !important;
+    font-size: 24px;
+    font-family: 'Nunito';
+    line-height: 1;
+    &:hover {
+        color: $white;
+        background-color: darken($background-color, 10);
+    }
+}
+
+.light-purple-button {
+    @include button($light-purple);
+}
+
+.purple-button {
+    @include button($purple);
+}

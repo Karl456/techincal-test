@@ -1,0 +1,51 @@
+.testimonials-container {
+    background-color: $purple;
+    padding: 135px 0;
+    .quotes-container {
+        text-align: center;
+        color: $white;
+        font-size: 65px;
+        font-family: 'Arial';
+        font-weight: 700;
+        span {
+            padding: 0 2px;
+            &:last-of-type {
+                position: relative;
+                top: 10px;
+            }
+        }
+    }
+    .testimonials-slider {
+        .testimonial {
+            text-align: center;
+            p {
+                color: $white;
+                font-size: 24px;
+                font-style: italic;
+                line-height: 38px;
+                b {
+                    font-size: 20px;
+                }
+            }
+        }
+        .slick-dots {
+            li {
+                button {
+                    border-radius: 7px;
+                    border: 1px solid $white;
+                    width: 14px;
+                    height: 14px;
+                    background-color: $purple;
+                    &::before {
+                        display: none;
+                    }
+                }
+                &.slick-active {
+                    button {
+                        background-color: $white;
+                    }
+                }
+            }
+        }
+    }
+}

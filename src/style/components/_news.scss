@@ -1,0 +1,53 @@
+.latest-news-container {
+    padding: 50px 0;
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        > [class*="col-"] {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    h2 {
+        margin-bottom: 50px;
+    }
+    a {
+        height: 100%;
+        position: relative;
+        padding-bottom: 35px;
+        display: block;
+        p {
+            font-size: 25px;
+            font-family: 'Nunito';
+            color: rgba(#1F1F1F, 0.75);
+            line-height: 34px;
+        }
+        .article-content {
+            position: relative;
+            time {
+                bottom: 0;
+                width: 100%;
+                font-size: 20px;
+                color: #95989A;
+                i {
+                    color: $purple;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $screen-md-min) {
+    .latest-news-container {
+        a {
+            .article-content {
+                padding-bottom: 25px;
+                min-height: 150px;
+                time {
+                    position: absolute;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+<div class="left-image-right-content-container">
+    <div class="row no-gutters">
+        <div class="col-sm-12 col-lg-6">
+            <div class="image-container">
+                <img src="{{ block.contentImage.first().url }}" alt="">
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="content-container">
+                <h2>{{ block.contentTitle }}</h2>
+                <p>{{ block.contentText | nl2br }}</p>
+                <p>{{ block.contentLink.link({ 'class': 'purple-button' }) }}</p>
+            </div>
+        </div>
+    </div>
+</div>

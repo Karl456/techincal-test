@@ -1,0 +1,20 @@
+<section class="three-column-block-container">
+    <div class="container">
+        <div class="row">
+            {% for threeColumnBlock in block.threeColumnBlock %}
+                <div class="col-xs-12 col-md-4">
+                    <div class="column-block">
+                        <div class="column-block-image">
+                            <img src="{{ threeColumnBlock.threeColumnBlockImage.first().url  }}" alt="">
+                            <div class="column-block-hover">
+                                <p class="column-block-title">{{ threeColumnBlock.threeColumnBlockTitle }}</p>
+                                <p class="column-block-subtitle">{{ threeColumnBlock.threeColumnBlockSubtitle }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <p class="mobile-swipe hidden-md hidden-lg"><i class="fas fa-chevron-left"></i><i class="fas fa-chevron-left"></i> Swipe <i class="fas fa-chevron-right"></i><i class="fas fa-chevron-right"></i></p>
+    </div>
+</section>

@@ -1,0 +1,20 @@
+<section class="services-container">
+    <div class="container">
+        <h2 class="text-center">Our Services</h2>
+        <div class="row">
+            {% for service in block.services %}
+                <div class="col-xs-12 col-md-4">
+                    <div class="row no-gutters">
+                        <div class="col-xs-4 col-md-4">
+                            <img src="{{ service.serviceIcon.first().url }}" alt="">
+                        </div>
+                        <div class="col-xs-8 col-md-8">
+                            <h3>{{ service.serviceTitle }}</h3>
+                            <p>{{ service.serviceContent }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
